@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.dictionary.fragments.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_main_to_words"
+            app:destination="@id/wordsFragment"
+            app:enterAnim="@anim/fragment_slide_left"
+            app:exitAnim="@anim/fragment_low_slide_left"
+            app:popEnterAnim="@anim/fragment_low_slide_right"
+            app:popExitAnim="@anim/fragment_slide_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/wordsFragment"
+        android:name="com.example.dictionary.fragments.words.WordsFragment"
+        android:label="WordsFragment"
+        tools:layout="@layout/fragment_words">
+
+        <argument
+            android:name="categoryId"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <argument
+            android:name="categoryName"
+            app:argType="string"
+            app:nullable="false" />
+
+    </fragment>
+
+</navigation>

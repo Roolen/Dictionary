@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Dictionary</string>
+    <string name="wordName">%1d. %2s</string>
+    <string name="wordTranscription">[%1s]</string>
+    <string name="appName">Aethetic</string>
+</resources>

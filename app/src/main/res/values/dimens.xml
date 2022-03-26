@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- margins -->
+    <dimen name="smallestMargin">2dp</dimen>
+    <dimen name="tinyMargin">4dp</dimen>
+    <dimen name="smallMargin">8dp</dimen>
+    <dimen name="smallBigMargin">12dp</dimen>
+    <dimen name="xSmallMargin">14dp</dimen>
+    <dimen name="normalMargin">16dp</dimen>
+    <dimen name="normalBigMargin">18dp</dimen>
+    <dimen name="tinyLargeMargin">20dp</dimen>
+    <dimen name="largeMargin">24dp</dimen>
+    <dimen name="largePlusMargin">28dp</dimen>
+    <dimen name="xLargeMargin">32dp</dimen>
+    <dimen name="xPlusLargeMargin">37dp</dimen>
+    <dimen name="xxLargeMargin">42dp</dimen>
+    <dimen name="xxxLargeMargin">64dp</dimen>
+    <!-- paddings -->
+    <dimen name="superTinyPadding">2dp</dimen>
+    <dimen name="tinyPadding">4dp</dimen>
+    <dimen name="smallPadding">8dp</dimen>
+    <dimen name="smallBigPadding">12dp</dimen>
+    <dimen name="normalPadding">16dp</dimen>
+    <dimen name="xNormalPadding">20dp</dimen>
+    <dimen name="largePadding">24dp</dimen>
+    <dimen name="xLargePadding">32dp</dimen>
+    <dimen name="xxLargePadding">40dp</dimen>
+    <dimen name="xxxLargePadding">64dp</dimen>
+    <dimen name="superLargePadding">76dp</dimen>
+    <dimen name="swipeRefreshPadding">102dp</dimen>
+    <dimen name="fieldBottomPadding">0dp</dimen>
+    <!-- corners -->
+    <dimen name="smallestCorners">2dp</dimen>
+    <dimen name="smallCorners">4dp</dimen>
+    <dimen name="normalCorners">6dp</dimen>
+    <dimen name="mediumCorners">8dp</dimen>
+    <dimen name="mediumBigCorners">10dp</dimen>
+    <dimen name="bigCorners">16dp</dimen>
+    <!-- elevations -->
+    <dimen name="normalElevation">8dp</dimen>
+    <dimen name="barsElevation">4dp</dimen>
+    <dimen name="productsElevation">4dp</dimen>
+    <!-- icon sizes -->
+    <dimen name="tinyIconSize">16dp</dimen>
+    <dimen name="smallIconSize">24dp</dimen>
+    <dimen name="normalIconSize">32dp</dimen>
+    <dimen name="halfLargeIconSize">40dp</dimen>
+    <dimen name="hugeIconSize">52dp</dimen>
+    <dimen name="deliveryIconWidth">82dp</dimen>
+    <dimen name="superLargeIconSize">54dp</dimen>
+    <dimen name="superLargePlusIconSize">62dp</dimen>
+    <dimen name="superXLargeIconSize">68dp</dimen>
+    <dimen name="superXXLargeIconSize">72dp</dimen>
+    <dimen name="superXXXLargeIconSize">80dp</dimen>
+    <!-- strokes -->
+    <dimen name="tinyStroke">2dp</dimen>
+    <dimen name="normalStroke">4dp</dimen>
+    <!-- line heights -->
+    <!-- texts sizes dimensions -->
+    <dimen name="textSizeSmallest">10sp</dimen>
+    <dimen name="textSizeTiny">12sp</dimen>
+    <dimen name="textNotScaleSizeTiny">12dp</dimen>
+    <dimen name="textSizeXTiny">13sp</dimen>
+    <dimen name="textSizeSmall">14sp</dimen>
+    <dimen name="textNotScaleSizeSmall">14dp</dimen>
+    <dimen name="textSizeXSmall">15sp</dimen>
+    <dimen name="textNotScaleSizeXSmall">15dp</dimen>
+    <dimen name="textSizeNormal">16sp</dimen>
+    <dimen name="textNotScaleSizeNormal">16dp</dimen>
+    <dimen name="textSizeNormalForDownCatalog" tools:ignore="PxUsage">16px</dimen>
+    <dimen name="textSizeLarge">18sp</dimen>
+    <dimen name="textNotScaleSizeLarge">18dp</dimen>
+    <dimen name="textSizeXLarge">20sp</dimen>
+    <dimen name="textNotScaleSizeXLarge">20dp</dimen>
+    <dimen name="textSizeXXSmall">22sp</dimen>
+    <dimen name="textSizeXXLarge">24sp</dimen>
+    <dimen name="textSizeXXXLarge">26sp</dimen>
+    <dimen name="textSizeSuperLarge">28sp</dimen>
+    <dimen name="textSizeSearchTitle">28sp</dimen>
+    <dimen name="textSizeHuge">30sp</dimen>
+    <dimen name="textSizeField">18sp</dimen>
+    <dimen name="textSizeHintField">16sp</dimen>
+    <dimen name="textSizeStaticButtons">20sp</dimen>
+    <dimen name="textSizeOrderTitle">@dimen/textSizeLarge</dimen>
+    <dimen name="textSizeOrderDescription">@dimen/textSizeNormal</dimen>
+    <dimen name="textSizeRestoreButton">@dimen/textSizeLarge</dimen>
+    <dimen name="reviewTitleTextSize">20sp</dimen>
+    <!-- other dimensions -->
+</resources>
