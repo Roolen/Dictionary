@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 2,
-    "identityHash": "ca2481f6bcaa70dc67df72f0ca01e902",
+    "identityHash": "d61c3d695502121bed97338fb875c84c",
     "entities": [
       {
         "tableName": "Category",
@@ -38,7 +38,7 @@
       },
       {
         "tableName": "Word",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `value` TEXT NOT NULL, `translate` TEXT NOT NULL, `transcription` TEXT NOT NULL, `categoryId` INTEGER NOT NULL, `sound` BLOB, PRIMARY KEY(`id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `value` TEXT NOT NULL, `translate` TEXT NOT NULL, `transcription` TEXT NOT NULL, `isFavorite` INTEGER NOT NULL, `categoryId` INTEGER NOT NULL, `sound` BLOB, PRIMARY KEY(`id`))",
         "fields": [
           {
             "fieldPath": "id",
@@ -62,6 +62,12 @@
             "fieldPath": "transcription",
             "columnName": "transcription",
             "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isFavorite",
+            "columnName": "isFavorite",
+            "affinity": "INTEGER",
             "notNull": true
           },
           {
@@ -90,7 +96,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ca2481f6bcaa70dc67df72f0ca01e902')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd61c3d695502121bed97338fb875c84c')"
     ]
   }
 }

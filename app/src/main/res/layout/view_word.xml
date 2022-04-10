@@ -58,6 +58,21 @@
             app:rippleColor="@color/ripple"
             app:iconSize="18dp" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/favouriteButton"
+            style="@style/Widget.AppCompat.Button.TextButton.IconOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/smallMargin"
+            android:padding="4dp"
+            app:cornerRadius="80dp"
+            app:icon="@drawable/ic_heart"
+            app:iconSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/soundButton"
+            app:layout_constraintTop_toBottomOf="@id/wordTranscription"
+            app:rippleColor="@color/ripple" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

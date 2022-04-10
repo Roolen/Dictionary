@@ -1,4 +1,4 @@
-package com.example.dictionary.fragments.words
+package com.example.dictionary.fragments.favourites
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,23 +8,21 @@ import com.example.dictionary.App
 import com.example.dictionary.model.entities.Word
 import kotlinx.coroutines.launch
 
-class WordsViewModel : ViewModel() {
-    private val _words = MutableLiveData<List<Word>>()
-    val words: LiveData<List<Word>> = _words
+class FavouritesViewModel : ViewModel() {
+    private val _favourites = MutableLiveData<List<Word>>()
+    val favourites: LiveData<List<Word>> = _favourites
 
-    private var categoryId = -1
-    fun loadWords(categoryId: Int) {
-        this.categoryId = categoryId
+    fun loadFavorites() {
         viewModelScope.launch {
-            val response = App.getInstance().db.wordsDao().getWordsByCategory(categoryId)
-            _words.value = response
+            val response = App.getInstance().db.wordsDao().getFavourites()
+            _favourites.value = response
         }
     }
 
     fun changeFavorite(word: Word) {
         viewModelScope.launch {
             App.getInstance().db.wordsDao().updateWord(word.copy(isFavorite = word.isFavorite.not()))
-            loadWords(categoryId)
+            loadFavorites()
         }
     }
 }

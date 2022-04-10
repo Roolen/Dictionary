@@ -13,7 +13,8 @@ import com.example.dictionary.playMp3
 import com.example.dictionary.str
 
 class WordsAdapter(
-    private val onClick: (Word) -> Unit = {}
+    private val onClick: (Word) -> Unit = {},
+    private val onHeartClick: (Word) -> Unit = {}
 ) : ListAdapter<Word, WordsAdapter.ViewHolder>(DetailImageDiffUtilCallback()) {
     private val mediaPlayer = MediaPlayer()
 
@@ -25,11 +26,20 @@ class WordsAdapter(
             binding.wordTranslate.text = word.translate
             binding.wordTranscription.text = str(R.string.wordTranscription, word.transcription)
 
+            if (word.isFavorite) {
+                binding.favouriteButton.setIconResource(R.drawable.ic_heart_fill)
+            }
+            else {
+                binding.favouriteButton.setIconResource(R.drawable.ic_heart)
+            }
+
             binding.soundButton.setOnClickListener {
                 word.sound?.let {
                     playMp3(mediaPlayer, it)
                 }
             }
+            binding.favouriteButton.setOnClickListener { onHeartClick(word) }
+            binding.root.setOnClickListener { onClick(word) }
         }
     }
 

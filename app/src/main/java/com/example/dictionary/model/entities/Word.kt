@@ -10,6 +10,7 @@ data class Word(
     @ColumnInfo(name = "value") val value: String,
     @ColumnInfo(name = "translate") val translate: String,
     @ColumnInfo(name = "transcription") val transcription: String,
+    @ColumnInfo(name = "isFavorite") val isFavorite: Boolean,
     @ColumnInfo(name = "categoryId") val categoryId: Int,
     @ColumnInfo(name = "sound") val sound: ByteArray?
 )

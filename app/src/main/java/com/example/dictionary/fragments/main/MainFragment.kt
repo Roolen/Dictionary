@@ -45,6 +45,12 @@ class MainFragment : Fragment() {
     private fun setListeners() {
         binding.apply {
             toolbar.setNavigationOnClickListener { findNavController().popBackStack() }
+
+            toFavouriteButton.setOnClickListener {
+                findNavController().navigate(
+                    MainFragmentDirections.actionMainToFavourites()
+                )
+            }
         }
     }
 

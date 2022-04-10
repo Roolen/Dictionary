@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_arrow_back.xml" value="0.4755" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_sound.xml" value="0.4755" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ripple_1.xml" value="0.4755" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Dictionary/app/src/main/res/layout/activity_main.xml" value="0.5223958333333333" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Dictionary/app/src/main/res/layout/fragment_favourites.xml" value="0.5364583333333334" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Dictionary/app/src/main/res/layout/fragment_main.xml" value="0.5364583333333334" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Dictionary/app/src/main/res/layout/fragment_words.xml" value="0.46396396396396394" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Dictionary/app/src/main/res/layout/fragments_words.xml" value="0.33" />

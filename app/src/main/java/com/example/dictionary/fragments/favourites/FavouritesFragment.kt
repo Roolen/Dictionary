@@ -1,4 +1,4 @@
-package com.example.dictionary.fragments.words
+package com.example.dictionary.fragments.favourites
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,22 +7,24 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dictionary.LinearItemDecorations
 import com.example.dictionary.R
 import com.example.dictionary.adapters.WordsAdapter
-import com.example.dictionary.databinding.FragmentWordsBinding
+import com.example.dictionary.databinding.FragmentFavouritesBinding
+import com.example.dictionary.gone
+import com.example.dictionary.visible
 
-class WordsFragment : Fragment() {
-    private lateinit var binding: FragmentWordsBinding
-    private val viewModel: WordsViewModel by activityViewModels()
-    private val args: WordsFragmentArgs by navArgs()
+class FavouritesFragment : Fragment() {
+    private lateinit var binding: FragmentFavouritesBinding
+    private val viewModel: FavouritesViewModel by activityViewModels()
+    private val prefs by lazy { PreferenceManager.getDefaultSharedPreferences(requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = FragmentWordsBinding.inflate(inflater, container, false).apply {
+    ): View = FragmentFavouritesBinding.inflate(inflater, container, false).apply {
         binding = this
 
         wordsRecycler.addItemDecoration(
@@ -33,14 +35,10 @@ class WordsFragment : Fragment() {
         )
     }.root
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel.loadWords(args.categoryId)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.toolbar.title = args.categoryName
+
+        viewModel.loadFavorites()
 
         setObservers()
         setListeners()
@@ -48,8 +46,16 @@ class WordsFragment : Fragment() {
     }
 
     private fun setObservers() {
-        viewModel.words.observe(viewLifecycleOwner) { words ->
-            wordsAdapter.submitList(words)
+        viewModel.favourites.observe(viewLifecycleOwner) { words ->
+            if (words.count() > 0) {
+                wordsAdapter.submitList(words)
+                binding.errorMessage.gone()
+                binding.wordsRecycler.visible()
+            }
+            else {
+                binding.errorMessage.visible()
+                binding.wordsRecycler.gone()
+            }
         }
     }
 
@@ -71,5 +77,4 @@ class WordsFragment : Fragment() {
         binding.wordsRecycler.adapter = wordsAdapter
         binding.wordsRecycler.layoutManager = LinearLayoutManager(requireContext())
     }
-
 }

@@ -3,4 +3,7 @@
     <string name="wordName">%1d. %2s</string>
     <string name="wordTranscription">[%1s]</string>
     <string name="appName">Aethetic</string>
+    <string name="favouriteButton">Избранное</string>
+    <string name="translateButton">Перевод</string>
+    <string name="notExistFavorites">У вас нет избранных слов</string>
 </resources>
