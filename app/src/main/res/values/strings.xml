@@ -6,4 +6,6 @@
     <string name="favouriteButton">Избранное</string>
     <string name="translateButton">Перевод</string>
     <string name="notExistFavorites">У вас нет избранных слов</string>
+    <string name="translateTitle">Перевод</string>
+    <string name="translateMoreButton">Перевести</string>
 </resources>

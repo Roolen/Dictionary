@@ -10,7 +10,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         reference = this
-        db = Room.databaseBuilder(applicationContext, AppDatabase::class.java, "database_1.db")
+        db = Room.databaseBuilder(applicationContext, AppDatabase::class.java, "database_01.db")
             .createFromAsset("database.db")
             .build()
     }

@@ -27,6 +27,14 @@
             app:popEnterAnim="@anim/fragment_low_slide_right"
             app:popExitAnim="@anim/fragment_slide_right" />
 
+        <action
+            android:id="@+id/action_main_to_translate"
+            app:destination="@id/translateFragment"
+            app:enterAnim="@anim/fragment_slide_left"
+            app:exitAnim="@anim/fragment_low_slide_left"
+            app:popEnterAnim="@anim/fragment_low_slide_right"
+            app:popExitAnim="@anim/fragment_slide_right" />
+
     </fragment>
     <fragment
         android:id="@+id/wordsFragment"
@@ -51,5 +59,18 @@
         android:name="com.example.dictionary.fragments.favourites.FavouritesFragment"
         android:label="FavouritesFragment"
         tools:layout="@layout/fragment_favourites"/>
+
+    <fragment
+        android:id="@+id/translateFragment"
+        android:name="com.example.dictionary.fragments.translate.TranslateFragment"
+        android:label="TranslateFragment"
+        tools:layout="@layout/fragment_translate">
+
+        <argument
+            android:name="query"
+            app:argType="string"
+            android:defaultValue="" />
+
+    </fragment>
 
 </navigation>
