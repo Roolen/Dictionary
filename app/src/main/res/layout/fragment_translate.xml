@@ -59,7 +59,7 @@
                 tools:text="Текст для перевода" />
 
             <View
-                android:id="@+id/translateTitle"
+                android:id="@+id/translateDivider"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/largeMargin"
@@ -73,10 +73,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/normalMargin"
-                android:paddingHorizontal="@dimen/normalPadding"
+                android:paddingStart="@dimen/normalPadding"
+                android:paddingEnd="@dimen/largePadding"
                 android:textColor="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/translateTitle"
+                app:layout_constraintTop_toBottomOf="@+id/translateDivider"
                 tools:text="Переведённый текст" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/soundButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normalMargin"
+                android:layout_marginEnd="@dimen/normalMargin"
+                android:padding="4dp"
+                style="@style/Widget.AppCompat.Button.TextButton.IconOnly"
+                app:layout_constraintTop_toTopOf="@id/translateDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:icon="@drawable/ic_sound"
+                app:cornerRadius="80dp"
+                app:rippleColor="@color/ripple"
+                app:iconSize="18dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
